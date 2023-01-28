@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Appointment App With Api</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        * {
+            color: white;
+        }
+    </style>
+  </head>
+  <body style="background: #1d2630; color: white;">
+    <div class="container">
+      <h2 class="mt-5 mb-5">Booking Appointment App Using Api</h2>
+      <div class="mb-5">
+        <div class="row">
+          <div class="form-group col-md-6 mb-3">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Enter Name" />
+          </div>
+          <div class="form-group col-md-6 mb-3">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="xyz@gmail.com" />
+          </div>
+          <div class="form-group col-md-6 mb-3">
+            <label for="phone">Phone</label>
+            <input type="number" name="phone" id="phone" class="form-control" placeholder="Enter Phone Number" />
+          </div>
+          <div class="form-group col-md-6 mb-3">
+            <label for="time">Date & Time</label>
+            <input
+              type="datetime-local"
+              name="time"
+              id="time"
+              class="form-control"
+            />
+          </div>
+          <div class="col-lg-12 mt-5">
+            <button class="btn btn-success" id="Submit" onclick="addData()">
+              Book Appointment
+            </button>
+            <button class="btn btn-primary" id="Update" style="display: none;">Update Details</button>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="row mt-5">
+        <div class="col-12">
+          <table class="table table-bodered" id="crudTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Date & Time</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
